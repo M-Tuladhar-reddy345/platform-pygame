@@ -31,7 +31,7 @@ class mainplayer(pygame.sprite.Sprite):
         if self.gameover:
             self.image = pygame.image.load('maincharacter/mainnew.png')
             if keys[pygame.K_UP] and self.jump == False and self.in_air == False:
-                self.vel_y = -15
+                self.vel_y = -12
                 self.jump = True
                 self.left = False
                 self.right = False
@@ -54,8 +54,8 @@ class mainplayer(pygame.sprite.Sprite):
 
 
             self.vel_y += 1
-            if self.vel_y > 15:
-                self.vel_y = 15
+            if self.vel_y > 12:
+                self.vel_y = 12
             dy += self.vel_y
 
             #colliderect
